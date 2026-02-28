@@ -40,3 +40,5 @@ out/
 ### Kotlin ###
 .kotlin
 /log/
+src/main/resources/application-local.yml
+arca.html

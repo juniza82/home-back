@@ -57,9 +57,8 @@ jwt:
 
 notification:
   slack:
+    # 슬랙 웹후크 URL (local profile에서 재정의하여 사용)
     webhook-url: your-slack-webhook-url
   discord:
+    # 디스코드 웹후크 URL (local profile에서 재정의하여 사용)
     webhook-url: your-discord-webhook-url
-  telegram:
-    bot-token: your-telegram-bot-token
-    chat-id: your-telegram-chat-id

@@ -66,6 +66,9 @@ dependencies {
 	// ObjectMapper
 	implementation("org.modelmapper:modelmapper:3.2.2")
 
+	// HTML Parser
+	implementation("org.jsoup:jsoup:1.18.1")
+
 	// jwt
 	implementation("io.jsonwebtoken:jjwt-api:0.12.6")
 	runtimeOnly("io.jsonwebtoken:jjwt-impl:0.12.6")
