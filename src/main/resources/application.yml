@@ -1,0 +1,56 @@
+server:
+  port: 80
+
+spring:
+  application:
+    name: home
+  flyway:
+    enabled: true
+    baseline-on-migrate: true
+    baseline-version: 0
+    locations: classpath:db/migration/dev
+  # JPA
+  jpa:
+    open-in-view: false
+    hibernate:
+      ddl-auto: none        # DB 초기화 전략 (none, create, create-drop, update, validate)
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+        show_sql: true        # 쿼리 로그 출력
+        format_sql: false      # 쿼리 로그 포맷 (정렬)
+        use_sql_comments: false
+
+        default_batch_fetch_size: 1000
+
+        order_inserts: true
+        order_updates: true
+        jdbc:
+          batch_size: 1000
+          fetch_size: 1000
+
+        cache:
+          use_second_level_cache: false
+
+# SWAGGER
+springdoc:
+  swagger-ui:
+    groups-order: DESC
+    tags-sorter: alpha
+    operations-sorter: method
+    display-request-duration: true
+    version: v1
+    path: /swagger-ui.html
+  api-docs:
+    path: /api-docs
+    enabled: true
+  default-consumes-media-type: application/json
+  default-produces-media-type: application/json
+  writer-with-default-pretty-printer: true
+  paths-to-exclude:
+    - /test/**
+    - /dev/**
+
+
+jwt:
+  secret-key: BMXDcZQGBFnKNYCYRgsIxiFQR

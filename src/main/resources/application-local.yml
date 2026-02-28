@@ -1,0 +1,28 @@
+server:
+  port: 8082
+
+spring:
+  # DataSource
+  datasource:
+    # Maria
+    url: jdbc:postgresql://localhost:5432/homedb
+    username: admin
+    password: lej810
+    driver-class-name: org.postgresql.Driver
+
+
+# Logging
+logging:
+  file:
+    path: ./log/home
+  level: # 각 package 별로 로깅 레벨을 지정할 수 있다.
+    root: INFO
+#    org.hibernate.SQL: debug
+#    org.hibernate.type.descriptor.sql: trace
+    org:
+      hibernate:
+        type:
+          descriptor:
+            sql:
+              BasicBinder: INFO              # TRACE org.hibernate.type.descriptor.sql.BasicBinder.bind 로그를 지웁니다.
+        SQL: INFO                            # DEBUG              org.hibernate.SQL.logStatement 를 지웁니다.
