@@ -54,3 +54,12 @@ springdoc:
 
 jwt:
   secret-key: BMXDcZQGBFnKNYCYRgsIxiFQR
+
+notification:
+  slack:
+    webhook-url: your-slack-webhook-url
+  discord:
+    webhook-url: your-discord-webhook-url
+  telegram:
+    bot-token: your-telegram-bot-token
+    chat-id: your-telegram-chat-id

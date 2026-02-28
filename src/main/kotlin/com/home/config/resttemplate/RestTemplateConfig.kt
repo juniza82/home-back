@@ -1,4 +1,4 @@
-package com.home.admin.config.resttemplate
+package com.home.config.resttemplate
 
 import org.springframework.context.annotation.Bean
 import org.springframework.context.annotation.Configuration
